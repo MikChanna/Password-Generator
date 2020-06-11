@@ -9,69 +9,24 @@
 //   passwordText.value = password;
 // }
 
+// slider function
+var slider = document.getElementById("myRange");
+var output = document.querySelector("#demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function () {
+  output.innerHTML = this.value;
+};
+
 // // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
 
-var uppercaseLetters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
+var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var lowercaseLetters = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
+var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
 
 // var lowercaseLetters = uppercaseLetters.toLowerCase();
-var specialChar = ["!", "@", "#", "$", "%", "^", "&", "*"];
+var specialChar = "!@#$%^&*()?></][{}";
 
 // check to see if the arrays are recognized
 
@@ -80,20 +35,42 @@ console.log(lowercaseLetters);
 console.log(specialChar);
 
 // prompts
-var passwordLength = prompt(
-  "How many characters would you like for your password (8-128)?"
-);
+// var passwordLength = prompt(
+//   "How many characters would you like for your password (8-128)?"
+// );
 
-var lowerChoice = prompt("Would you like to include lower case letters? (y/n");
-var upperChoice = prompt("Would you like to include upper case letters? (y/n)");
-var specialChoice = prompt(
-  "Would you like to include special characters? (y/n)"
-);
+// var lowerChoice = prompt("Would you like to include lower case letters? (y/n");
+// var upperChoice = prompt("Would you like to include upper case letters? (y/n)");
+// var numChoice = prompt("Would you like to include numbers? (y/n)");
+// var specialChoice = prompt(
+//   "Would you like to include special characters? (y/n)"
+// );
 
 var lower = lowerChoice.toLowerCase();
 var upper = upperChoice.toLowerCase();
+var num = numChoice.toLowerCase();
 var special = specialChoice.toLowerCase();
 
 // check to see if the answer to the prompts are recognized
 
-console.log(passwordLength + lower + upper + special);
+console.log(passwordLength + lower + upper + num + special);
+
+// random selection
+
+for (var i = 0; i < passwordLength; i++) {
+  var lowercaseRandom =
+    lowercaseLetters[Math.floor(Math.random() * lowercaseLetters.length)];
+  var uppercaseRandom =
+    uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)];
+  var numRandom = Math.floor(Math.random() * 10);
+  var specialRandom =
+    specialChar[Math.floor(Math.random() * specialChar.length)];
+
+  console.log(lowercaseRandom + uppercaseRandom + numRandom + specialRandom);
+}
+
+function genPassword() {
+  for (var i = 0; i < passwordLength; i++) {
+    console.log();
+  }
+}
