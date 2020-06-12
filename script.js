@@ -1,20 +1,10 @@
-// // Assignment Code
-// var generateBtn = document.querySelector("#generate");
-
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-// }
-
 // DOM Elements
 var upperEl = document.querySelector(".upper");
 var lowerEl = document.querySelector(".lower");
 var numberEl = document.querySelector(".number");
 var specialEl = document.querySelector(".special");
-var generateEl = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
+var passwordText = document.querySelector("#password");
 
 // slider function
 var slider = document.getElementById("myRange");
@@ -23,6 +13,9 @@ output.innerHTML = slider.value;
 
 slider.oninput = function () {
   output.innerHTML = this.value;
+
+  var length = +slider.value;
+  console.log(length);
 };
 
 // password choices
@@ -65,4 +58,35 @@ var randomFunctions = {
 };
 
 // // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", function () {
+  var hasUpper = upperEl.checked;
+  var hasLower = lowerEl.checked;
+  var hasNum = numberEl.checked;
+  var hasSpecial = specialEl.checked;
+
+  passwordText.value = generatePassword(
+    hasUpper,
+    hasLower,
+    hasNum,
+    hasSpecial,
+    length
+  );
+});
+
+// // Write password to the #password input
+
+var password = generatePassword();
+passwordText.value = password;
+
+function generatePassword(lower, upper, special, num, length) {
+  var typesCount = upper + lower + special + num;
+  var typeArray = [{ upper }, { lower }, { special }, { num }].filter(
+    (item) => Object.values(item)[0]
+  );
+
+  if (typesCount === 0) {
+    return "Please check at least 1 option";
+  }
+
+  for (var i = 0; i < length; i += randomFunctions) {}
+}
