@@ -18,42 +18,42 @@ slider.oninput = function () {
   output.innerHTML = this.value;
 };
 
+// password choices
+var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
+var specialChar = "!@#$%^&*()?></][{}";
+
+// Random Selector Functions
+
+function getRandomLower() {
+  return lowercaseLetters[Math.floor(Math.random() * lowercaseLetters.length)];
+}
+
+function getRandomUpper() {
+  return uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)];
+}
+
+function getRandomSpecial() {
+  return specialChar[Math.floor(Math.random() * specialChar.length)];
+}
+function getrandomNum() {
+  return [Math.floor(Math.random() * 10)];
+}
+
 // // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
 
-var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
-
-// var lowercaseLetters = uppercaseLetters.toLowerCase();
-var specialChar = "!@#$%^&*()?></][{}";
-
 // check to see if the arrays are recognized
 
-console.log(uppercaseLetters);
-console.log(lowercaseLetters);
-console.log(specialChar);
+console.log(
+  uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)]
+);
+console.log(
+  lowercaseLetters[Math.floor(Math.random() * lowercaseLetters.length)]
+);
+console.log(specialChar[Math.floor(Math.random() * specialChar.length)]);
 
-// prompts
-// var passwordLength = prompt(
-//   "How many characters would you like for your password (8-128)?"
-// );
-
-// var lowerChoice = prompt("Would you like to include lower case letters? (y/n");
-// var upperChoice = prompt("Would you like to include upper case letters? (y/n)");
-// var numChoice = prompt("Would you like to include numbers? (y/n)");
-// var specialChoice = prompt(
-//   "Would you like to include special characters? (y/n)"
-// );
-
-var lower = lowerChoice.toLowerCase();
-var upper = upperChoice.toLowerCase();
-var num = numChoice.toLowerCase();
-var special = specialChoice.toLowerCase();
-
-// check to see if the answer to the prompts are recognized
-
-console.log(passwordLength + lower + upper + num + special);
+console.log([Math.floor(Math.random() * 10)]);
 
 // random selection
 
