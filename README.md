@@ -8,6 +8,7 @@ The program will identify which options have been selected as well as counting h
 
 Based on the value from the range slider and the options checked, the program will generated a password on those parameters.
 
-See demo below:
+See the screenshot below:
 
-<img src="/demo/PGScreenshot.png">
+
+![PGScreenshot](https://user-images.githubusercontent.com/61893686/84579515-4efe1800-ad9c-11ea-8bce-06b0fd85156b.png)
