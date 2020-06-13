@@ -10,4 +10,4 @@ Based on the value from the range slider and the options checked, the program wi
 
 See demo below:
 
-![Password Generator demo](demo/demo.gif)
+<a src="/demo.demo.gif" alt = "password generator demo></a>
