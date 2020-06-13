@@ -12,3 +12,7 @@ See the screenshot below:
 
 
 ![PGScreenshot](https://user-images.githubusercontent.com/61893686/84579515-4efe1800-ad9c-11ea-8bce-06b0fd85156b.png)
+
+https://mikchanna.github.io/Password-Generator/.
+
+copyright 2020 Channa Mik Carlson
