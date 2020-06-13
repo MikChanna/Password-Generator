@@ -10,4 +10,4 @@ Based on the value from the range slider and the options checked, the program wi
 
 See demo below:
 
-<img src="demo/PGScreenshot.png">
+<img src="/demo/PGScreenshot.png">
